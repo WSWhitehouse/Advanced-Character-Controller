@@ -62,7 +62,7 @@ public class BasicMovementController : MonoBehaviour
         velocity += transform.right * horizontal;
         velocity += transform.forward * vertical;
 
-        if (velocity.magnitude > 1f)
+        if (velocity.sqrMagnitude > 1f)
             velocity.Normalize();
 
         return velocity;
